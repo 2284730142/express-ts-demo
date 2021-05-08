@@ -2,4 +2,5 @@
 
 开发环境运行
         
-    npm run start
+    command 1: npm run start
+    command 2: npm run webpack:dev
