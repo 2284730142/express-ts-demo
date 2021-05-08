@@ -10,7 +10,10 @@ const environment: EnvironmentType = process.env.NODE_ENV as EnvironmentType || 
 console.log(`当前运行环境： ${environment}`);
 
 app.get('/', (req: Request, res: Response) => {
-    const view: string = fs.readFileSync(path.join(__dirname, '../public/index.html'), 'utf8');
+    console.log(path.join(__dirname, './public/index.html'));
+    // const view: string = fs.readFileSync(path.join(__dirname, './public/index.html'), 'utf8');
+    const view: string = fs.readFileSync(`./public/index.html`, 'utf8');
+    console.log(view)
     res.send(view);
 });
 
